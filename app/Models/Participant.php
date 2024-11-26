@@ -5,14 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Attendance extends Model
+class Participant extends Model
 {
     use HasFactory;
 
+    protected $table = 'participants';
+
     protected $fillable = [
-        'participant_id',
-        'id_scan',
-        'scan_at',
-        'scan_by',
+        'name',
+        'email',
+        'phone',
+        'qr_content',
     ];
 }
+
+
+
+
